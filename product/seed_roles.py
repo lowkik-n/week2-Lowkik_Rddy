@@ -5,10 +5,10 @@ from product.utils.security import hash_password
 
 TEST_USERS = [
     {
-        "name": "prachi",
-        "email": "p@mail.com",
-        "password": "prachi123",
-        "mobile": "9010420106",
+        "name": "lowkik",
+        "email": "low@mail.com",
+        "password": "lowkik123",
+        "mobile": "9999900000",
         "role": "admin",
     },
     {
