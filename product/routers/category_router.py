@@ -4,7 +4,9 @@ from sqlalchemy.orm import Session
 from product.db.session import get_db
 from product.schemas.category_schema import CategoryCreate, CategoryResponse
 from product.services import category_service
-
+from product.models.user import User
+from product.utils.security import get_current_user
+from product.utils.authorization import UserRole, require_roles
 
 router = APIRouter(
     prefix="/categories",
@@ -20,6 +22,9 @@ router = APIRouter(
 def create_category(
     category: CategoryCreate,
     db: Session = Depends(get_db),
+    current_user: User = Depends(
+        require_roles(UserRole.ADMIN.value),
+    ),
 ):
     try:
         return category_service.create_category(
@@ -30,7 +35,7 @@ def create_category(
         raise HTTPException(
             status_code=400,
             detail=str(error),
-        )
+        ) from error
 
 
 @router.get(

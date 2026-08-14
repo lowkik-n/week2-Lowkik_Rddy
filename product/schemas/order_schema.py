@@ -19,8 +19,12 @@ class OrderCreate(BaseModel):
     user_id: int = Field(
         ...,
         gt=0,
-        validation_alias=AliasChoices("user_id", "UserID"),
+        validation_alias=AliasChoices(
+            "user_id",
+            "UserID",
+        ),
     )
+
     payment_method: str = Field(
         ...,
         min_length=1,
@@ -37,14 +41,18 @@ class OrderCreate(BaseModel):
         normalized_value = value.strip().lower()
 
         if normalized_value not in VALID_PAYMENT_METHODS:
-            valid_methods = ", ".join(sorted(VALID_PAYMENT_METHODS))
+            valid_methods = ", ".join(
+                sorted(VALID_PAYMENT_METHODS)
+            )
             raise ValueError(
                 f"Payment method must be one of: {valid_methods}"
             )
 
         return normalized_value
 
-    model_config = ConfigDict(populate_by_name=True)
+    model_config = ConfigDict(
+        populate_by_name=True,
+    )
 
 
 class OrderDetailResponse(BaseModel):
@@ -55,23 +63,39 @@ class OrderDetailResponse(BaseModel):
             "OrderDetailID",
         ),
     )
+
     order_id: int = Field(
         ...,
-        validation_alias=AliasChoices("order_id", "OrderID"),
+        validation_alias=AliasChoices(
+            "order_id",
+            "OrderID",
+        ),
     )
+
     product_id: int = Field(
         ...,
-        validation_alias=AliasChoices("product_id", "ProductID"),
+        validation_alias=AliasChoices(
+            "product_id",
+            "ProductID",
+        ),
     )
+
     quantity: int = Field(
         ...,
         gt=0,
-        validation_alias=AliasChoices("quantity", "Quantity"),
+        validation_alias=AliasChoices(
+            "quantity",
+            "Quantity",
+        ),
     )
+
     price: Decimal = Field(
         ...,
         gt=0,
-        validation_alias=AliasChoices("price", "Price"),
+        validation_alias=AliasChoices(
+            "price",
+            "Price",
+        ),
     )
 
     model_config = ConfigDict(
@@ -83,16 +107,28 @@ class OrderDetailResponse(BaseModel):
 class OrderFields(BaseModel):
     order_id: int = Field(
         ...,
-        validation_alias=AliasChoices("order_id", "OrderID"),
+        validation_alias=AliasChoices(
+            "order_id",
+            "OrderID",
+        ),
     )
+
     user_id: int = Field(
         ...,
-        validation_alias=AliasChoices("user_id", "UserID"),
+        validation_alias=AliasChoices(
+            "user_id",
+            "UserID",
+        ),
     )
+
     order_date: datetime = Field(
         ...,
-        validation_alias=AliasChoices("order_date", "OrderDate"),
+        validation_alias=AliasChoices(
+            "order_date",
+            "OrderDate",
+        ),
     )
+
     payment_method: str = Field(
         ...,
         validation_alias=AliasChoices(
@@ -100,6 +136,7 @@ class OrderFields(BaseModel):
             "PaymentMethod",
         ),
     )
+
     total_amount: Decimal = Field(
         ...,
         ge=0,
@@ -126,4 +163,9 @@ class OrderResponse(OrderFields):
             "order_details",
             "OrderDetails",
         ),
+    )
+
+    model_config = ConfigDict(
+        from_attributes=True,
+        populate_by_name=True,
     )

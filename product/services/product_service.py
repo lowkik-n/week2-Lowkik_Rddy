@@ -4,6 +4,11 @@ from product.models.category import Category
 from product.models.product import Product
 from product.repositories import product_repository
 from product.schemas.product_schema import ProductCreate
+from product.repositories import (
+    category_repository,
+    product_repository,
+)
+
 
 
 def create_product(
@@ -69,8 +74,30 @@ def search_products(
     name: str | None = None,
     category_id: int | None = None,
 ) -> list[Product]:
-    return product_repository.search_products(
+    if category_id is not None:
+        category = category_repository.get_category_by_id(
+            db=db,
+            category_id=category_id,
+        )
+
+        if category is None:
+            raise ValueError("Category not found")
+
+    products = product_repository.search_products(
         db=db,
         name=name,
         category_id=category_id,
     )
+
+    has_product_name = bool(name and name.strip())
+
+    if (
+        has_product_name
+        and category_id is not None
+        and not products
+    ):
+        raise ValueError(
+            "Product not found in the selected category",
+        )
+
+    return products

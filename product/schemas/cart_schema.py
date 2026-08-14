@@ -4,19 +4,26 @@ from pydantic import AliasChoices, BaseModel, ConfigDict, Field
 
 
 class CartItemCreate(BaseModel):
-    user_id: int = Field(
-        ...,
-        gt=0,
-    )
-
     product_id: int = Field(
         ...,
         gt=0,
+        validation_alias=AliasChoices(
+            "product_id",
+            "ProductID",
+        ),
     )
 
     quantity: int = Field(
         ...,
         gt=0,
+        validation_alias=AliasChoices(
+            "quantity",
+            "Quantity",
+        ),
+    )
+
+    model_config = ConfigDict(
+        populate_by_name=True,
     )
 
 
@@ -24,6 +31,14 @@ class CartItemUpdate(BaseModel):
     quantity: int = Field(
         ...,
         gt=0,
+        validation_alias=AliasChoices(
+            "quantity",
+            "Quantity",
+        ),
+    )
+
+    model_config = ConfigDict(
+        populate_by_name=True,
     )
 
 

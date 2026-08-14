@@ -7,6 +7,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from product.db.base import Base
 
+
 if TYPE_CHECKING:
     from product.models.cart import CartItem
     from product.models.order import Order
@@ -20,24 +21,37 @@ class User(Base):
         primary_key=True,
         autoincrement=True,
     )
+
     Name: Mapped[str] = mapped_column(
         String(100),
         nullable=False,
     )
+
     Email: Mapped[str] = mapped_column(
         String(255),
         unique=True,
         nullable=False,
         index=True,
     )
+
     Password: Mapped[str] = mapped_column(
         String(255),
         nullable=False,
     )
+
     Mobile: Mapped[str] = mapped_column(
         String(20),
         nullable=False,
     )
+
+    Role: Mapped[str] = mapped_column(
+        String(20),
+        nullable=False,
+        default="customer",
+        server_default="customer",
+        index=True,
+    )
+
 
     cart_items: Mapped[list["CartItem"]] = relationship(
         "CartItem",
@@ -50,4 +64,5 @@ class User(Base):
         back_populates="user",
         cascade="all, delete-orphan",
     )
+
 

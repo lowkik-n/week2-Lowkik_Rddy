@@ -1,0 +1,245 @@
+2026-08-12 20:42:54,280 - INFO - online-shopping-api - Root endpoint accessed
+2026-08-12 20:43:14,976 - INFO - online-shopping-api - Root endpoint accessed
+2026-08-12 20:43:25,912 - INFO - online-shopping-api - Root endpoint accessed
+2026-08-12 20:46:47,096 - WARNING - passlib.handlers.bcrypt - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\lowreddy\OneDrive - Deloitte (O365D)\Desktop\Casestudyw2\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-08-12 20:48:17,990 - INFO - online-shopping-api - Successful login for user_id=1
+2026-08-12 20:50:36,171 - INFO - online-shopping-api - Successful login for user_id=1
+2026-08-12 20:50:48,214 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 20:52:33,793 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 20:53:39,715 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 20:53:42,359 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 20:54:32,433 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 20:55:06,523 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 20:55:20,579 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 20:55:50,960 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 20:55:53,321 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 20:56:07,299 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 20:56:35,884 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 20:56:54,558 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 20:58:19,566 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 20:59:14,510 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 20:59:35,524 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 20:59:43,191 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 21:00:16,103 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-12 21:00:33,519 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-13 12:20:00,777 - INFO - online-shopping-api - Root endpoint accessed
+2026-08-13 12:36:14,932 - WARNING - passlib.handlers.bcrypt - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\lowreddy\OneDrive - Deloitte (O365D)\Desktop\Casestudyw2\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-08-13 12:37:13,965 - WARNING - online-shopping-api - Failed login attempt for email=prachi
+2026-08-13 12:38:38,271 - INFO - online-shopping-api - Successful login for user_id=1
+2026-08-13 12:51:42,995 - INFO - online-shopping-api - Successful login for user_id=1
+2026-08-13 12:51:51,359 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-13 12:52:31,343 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-13 14:41:29,743 - WARNING - passlib.handlers.bcrypt - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\lowreddy\OneDrive - Deloitte (O365D)\Desktop\Casestudyw2\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-08-13 14:49:27,377 - WARNING - online-shopping-api - Failed login attempt for email=prachi
+2026-08-13 14:49:43,443 - WARNING - online-shopping-api - Failed login attempt for email=prachi
+2026-08-13 14:49:57,048 - WARNING - online-shopping-api - Failed login attempt for email=prachi
+2026-08-13 14:50:43,769 - WARNING - passlib.handlers.bcrypt - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\lowreddy\OneDrive - Deloitte (O365D)\Desktop\Casestudyw2\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-08-13 14:50:44,021 - INFO - online-shopping-api - Successful login for user_id=1
+2026-08-13 14:57:11,169 - INFO - online-shopping-api - Successful login for user_id=1
+2026-08-13 15:39:47,018 - WARNING - online-shopping-api - Failed login attempt for email=prachi
+2026-08-13 15:40:08,139 - WARNING - passlib.handlers.bcrypt - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "C:\Users\lowreddy\OneDrive - Deloitte (O365D)\Desktop\Casestudyw2\venv\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2026-08-13 15:40:08,433 - INFO - online-shopping-api - Successful login for user_id=1
+2026-08-13 15:53:42,124 - INFO - online-shopping-api - Successful login for user_id=1
+2026-08-13 15:53:54,178 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-13 15:54:54,927 - INFO - online-shopping-api - Successful login for user_id=1
+2026-08-13 15:55:47,120 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-13 15:57:13,458 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-13 15:57:58,373 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-13 15:58:37,736 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-13 15:59:09,025 - INFO - online-shopping-api - Authenticated request for user_id=1
+2026-08-13 16:01:19,079 - INFO - online-shopping-api - Successful login for user_id=2
+2026-08-13 16:01:44,630 - INFO - online-shopping-api - Successful login for user_id=2
+2026-08-13 16:01:58,128 - INFO - online-shopping-api - Authenticated request for user_id=2
+{"timestamp": "2026-08-13T11:56:40.329392+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T11:56:40.350781+00:00", "level": "WARNING", "logger": "shopping-api", "message": "Failed login attempt for email=customer@example.com"}
+{"timestamp": "2026-08-13T11:59:03.055712+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T11:59:03.068185+00:00", "level": "WARNING", "logger": "shopping-api", "message": "Failed login attempt for email=customer@example.com"}
+{"timestamp": "2026-08-13T12:00:50.279131+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T12:00:50.295989+00:00", "level": "WARNING", "logger": "shopping-api", "message": "Failed login attempt for email=customer@example.com"}
+{"timestamp": "2026-08-13T12:01:00.883411+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T12:01:00.893398+00:00", "level": "WARNING", "logger": "shopping-api", "message": "Failed login attempt for email=customer@example.com"}
+{"timestamp": "2026-08-13T12:02:20.532306+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T12:02:20.543441+00:00", "level": "WARNING", "logger": "shopping-api", "message": "Failed login attempt for email=customer@example.com"}
+{"timestamp": "2026-08-13T12:41:13.899398+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T12:41:13.910876+00:00", "level": "WARNING", "logger": "shopping-api", "message": "Failed login attempt for email=customer@example.com"}
+{"timestamp": "2026-08-13T12:41:27.128229+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T12:41:27.351942+00:00", "level": "WARNING", "logger": "shopping-api", "message": "Failed login attempt for email=customer@test.com"}
+{"timestamp": "2026-08-13T12:41:27.995650+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T12:41:28.631803+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T12:41:28.660131+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:28.664441+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:29.394806+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T12:41:29.399533+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:29.422354+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:30.118048+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T12:41:30.121947+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:30.125416+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:30.337504+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T12:41:30.352143+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-13T12:41:32.101771+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T12:41:32.105590+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:32.108979+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:32.321062+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T12:41:32.324366+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-13T12:41:33.264662+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T12:41:33.268972+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:33.274914+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:33.522360+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T12:41:33.525566+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:33.529755+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:33.535211+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:34.223920+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T12:41:34.227816+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:34.234181+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:34.441623+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T12:41:34.444631+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-13T12:41:34.446501+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-13T12:41:34.448961+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-13T12:41:35.092767+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T12:41:35.096214+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:35.099293+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:41:36.009246+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T12:41:36.027108+00:00", "level": "WARNING", "logger": "shopping-api", "message": "Failed login attempt for email=customer@example.com"}
+{"timestamp": "2026-08-13T12:45:23.915664+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T12:45:24.119990+00:00", "level": "WARNING", "logger": "shopping-api", "message": "Failed login attempt for email=customer@test.com"}
+{"timestamp": "2026-08-13T12:45:24.877882+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T12:45:25.669299+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T12:45:25.687891+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:45:25.692942+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:45:26.478351+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T12:45:26.482021+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:45:26.485843+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:45:27.238673+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T12:45:27.242137+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:45:27.246508+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:45:27.534537+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T12:45:27.539976+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:45:27.550771+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:45:27.560263+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:45:28.314196+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T12:45:28.317258+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:45:28.321526+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:45:28.586987+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T12:45:28.590490+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-13T12:45:28.592433+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-13T12:45:28.597499+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-13T12:45:29.334817+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T12:45:29.337646+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:45:29.341067+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T12:45:30.504529+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T12:45:30.520342+00:00", "level": "WARNING", "logger": "shopping-api", "message": "Failed login attempt for email=customer@example.com"}
+{"timestamp": "2026-08-13T13:15:54.061451+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T13:15:54.410502+00:00", "level": "WARNING", "logger": "shopping-api", "message": "Failed login attempt for email=customer@test.com"}
+{"timestamp": "2026-08-13T13:15:55.404660+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T13:15:56.434492+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T13:15:56.468600+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T13:15:56.475074+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T13:15:57.499435+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T13:15:57.503736+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T13:15:57.507834+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T13:15:58.481093+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T13:15:58.485527+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T13:15:58.490681+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T13:15:58.961783+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T13:15:58.966664+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T13:15:59.006409+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T13:15:59.017384+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T13:15:59.992154+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T13:15:59.995644+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T13:16:00.001456+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T13:16:00.333310+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T13:16:00.337190+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-13T13:16:00.340426+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-13T13:16:00.343542+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-13T13:16:01.494551+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T13:16:01.501427+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T13:16:01.507904+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T13:16:02.996657+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T13:16:03.033467+00:00", "level": "WARNING", "logger": "shopping-api", "message": "Failed login attempt for email=customer@example.com"}
+{"timestamp": "2026-08-13T13:19:48.359448+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=3"}
+{"timestamp": "2026-08-13T17:09:06.462839+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T17:09:06.658162+00:00", "level": "WARNING", "logger": "shopping-api", "message": "Failed login attempt for email=customer@test.com"}
+{"timestamp": "2026-08-13T17:09:07.265898+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T17:09:07.853057+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T17:09:07.882753+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T17:09:07.886182+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T17:09:08.464260+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T17:09:08.466881+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T17:09:08.469786+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T17:09:09.044783+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T17:09:09.048514+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T17:09:09.052074+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T17:09:09.246717+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T17:09:09.250562+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T17:09:09.255095+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T17:09:09.258543+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T17:09:09.872777+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T17:09:09.875739+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T17:09:09.879685+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T17:09:10.092698+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T17:09:10.095689+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-13T17:09:10.098695+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-13T17:09:10.100850+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-13T17:09:10.706078+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-13T17:09:10.709165+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T17:09:10.712895+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-13T17:09:11.625944+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-13T17:09:11.639173+00:00", "level": "WARNING", "logger": "shopping-api", "message": "Failed login attempt for email=customer@example.com"}
+{"timestamp": "2026-08-14T04:37:33.756359+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-14T04:37:46.447789+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-14T04:39:10.399916+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-14T05:28:45.580380+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-14T05:28:45.820655+00:00", "level": "WARNING", "logger": "shopping-api", "message": "Failed login attempt for email=customer@test.com"}
+{"timestamp": "2026-08-14T05:28:46.475024+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-14T05:28:47.137274+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-14T05:28:47.210561+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-14T05:28:47.218414+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-14T05:28:47.896295+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-14T05:28:47.899480+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-14T05:28:47.902658+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-14T05:28:48.567849+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-14T05:28:48.570872+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-14T05:28:48.574058+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-14T05:28:48.784117+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-14T05:28:48.787988+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-14T05:28:48.792721+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-14T05:28:48.796863+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-14T05:28:49.528703+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-14T05:28:49.533476+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-14T05:28:49.539570+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-14T05:28:49.760426+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-14T05:28:49.764543+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-14T05:28:49.767192+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-14T05:28:49.769044+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}
+{"timestamp": "2026-08-14T05:28:50.430555+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=2"}
+{"timestamp": "2026-08-14T05:28:50.434229+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-14T05:28:50.437903+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=2"}
+{"timestamp": "2026-08-14T05:28:51.395705+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-14T05:28:51.408612+00:00", "level": "WARNING", "logger": "shopping-api", "message": "Failed login attempt for email=customer@example.com"}
+{"timestamp": "2026-08-14T05:36:53.619305+00:00", "level": "INFO", "logger": "shopping-api", "message": "Successful login for user_id=1"}
+{"timestamp": "2026-08-14T05:37:04.851942+00:00", "level": "INFO", "logger": "shopping-api", "message": "Authenticated request for user_id=1"}

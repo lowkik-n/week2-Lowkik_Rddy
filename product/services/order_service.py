@@ -7,20 +7,23 @@ from product.models.cart import CartItem
 from product.models.order import Order
 from product.models.order_detail import OrderDetail
 from product.models.product import Product
-from product.repositories import cart_repository
-from product.repositories import order_repository
-from product.repositories import product_repository
-from product.repositories import user_repository
+from product.repositories import (
+    cart_repository,
+    order_repository,
+    product_repository,
+    user_repository,
+)
 from product.schemas.order_schema import OrderCreate
 
 
 def create_order(
     db: Session,
     order_data: OrderCreate,
+    user_id: int,
 ) -> Order:
     user = user_repository.get_user_by_id(
         db,
-        order_data.user_id,
+        user_id,
     )
 
     if user is None:
@@ -28,13 +31,14 @@ def create_order(
 
     cart_items = cart_repository.get_cart_items_by_user(
         db,
-        order_data.user_id,
+        user_id,
     )
 
     if not cart_items:
         raise ValueError("Cart is empty")
 
     total_amount = Decimal("0.00")
+
     products_in_order: list[
         tuple[Product, CartItem, Decimal]
     ] = []
@@ -60,38 +64,55 @@ def create_order(
                 f"Not enough stock for {product.ProductName}",
             )
 
-        unit_price = Decimal(str(product.Price)).quantize(
+        unit_price = Decimal(
+            str(product.Price),
+        ).quantize(
             Decimal("0.01"),
         )
-        total_amount += unit_price * cart_item.Quantity
+
+        total_amount += (
+            unit_price * cart_item.Quantity
+        )
+
         products_in_order.append(
-            (product, cart_item, unit_price),
+            (
+                product,
+                cart_item,
+                unit_price,
+            ),
         )
 
     try:
         order = Order(
-            UserID=order_data.user_id,
+            UserID=user_id,
             PaymentMethod=order_data.payment_method,
             TotalAmount=total_amount,
         )
+
         db.add(order)
         db.flush()
 
-        for product, cart_item, unit_price in products_in_order:
+        for product, cart_item, unit_price in (
+            products_in_order
+        ):
             db.add(
                 OrderDetail(
                     order=order,
                     product=product,
                     Quantity=cart_item.Quantity,
                     Price=unit_price,
-                )
+                ),
             )
 
-            product.AvailableQuantity -= cart_item.Quantity
+            product.AvailableQuantity -= (
+                cart_item.Quantity
+            )
+
             db.delete(cart_item)
 
         db.commit()
         db.refresh(order)
+
         return order
 
     except SQLAlchemyError:
@@ -113,7 +134,10 @@ def get_orders_by_user(
     db: Session,
     user_id: int,
 ) -> list[Order]:
-    user = user_repository.get_user_by_id(db, user_id)
+    user = user_repository.get_user_by_id(
+        db,
+        user_id,
+    )
 
     if user is None:
         raise ValueError("User not found")

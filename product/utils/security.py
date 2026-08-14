@@ -1,49 +1,60 @@
 import os
 from datetime import datetime, timedelta, timezone
+from typing import Any
 
 from fastapi import Depends, HTTPException, status
-from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
+from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
-from pwdlib import PasswordHash
+from passlib.context import CryptContext
 from sqlalchemy.orm import Session
 
 from product.db.session import get_db
 from product.models.user import User
+from product.utils.logger import logger
+
 
 SECRET_KEY = os.getenv(
     "SECRET_KEY",
-    "replace-this-development-secret-key",
+    "development-only-secret-change-this",
 )
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
-password_hash = PasswordHash.recommended()
-bearer_scheme = HTTPBearer(auto_error=False)
+ALGORITHM = "HS256"
+TOKEN_EXPIRE_MINUTES = 60
+
+
+password_context = CryptContext(
+    schemes=["bcrypt"],
+    deprecated="auto",
+)
+
+
+oauth2_scheme = OAuth2PasswordBearer(
+    tokenUrl="/api/auth/login",
+)
 
 
 def hash_password(password: str) -> str:
-    return password_hash.hash(password)
+    return password_context.hash(password)
 
 
 def verify_password(
     plain_password: str,
     hashed_password: str,
 ) -> bool:
-    return password_hash.verify(
+    return password_context.verify(
         plain_password,
         hashed_password,
     )
 
 
-def create_access_token(subject: str) -> str:
-    expires_at = datetime.now(timezone.utc) + timedelta(
-        minutes=ACCESS_TOKEN_EXPIRE_MINUTES,
-    )
+def generate_token(data: dict[str, Any]) -> str:
+    payload = data.copy()
 
-    payload = {
-        "sub": subject,
-        "exp": expires_at,
-    }
+    payload["exp"] = datetime.now(
+        timezone.utc,
+    ) + timedelta(
+        minutes=TOKEN_EXPIRE_MINUTES,
+    )
 
     return jwt.encode(
         payload,
@@ -53,39 +64,69 @@ def create_access_token(subject: str) -> str:
 
 
 def get_current_user(
-    credentials: HTTPAuthorizationCredentials | None = Depends(
-        bearer_scheme,
-    ),
+    token: str = Depends(oauth2_scheme),
     db: Session = Depends(get_db),
 ) -> User:
-    unauthorized = HTTPException(
+    credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Invalid or missing authentication token",
         headers={"WWW-Authenticate": "Bearer"},
     )
 
-    if credentials is None:
-        raise unauthorized
-
     try:
         payload = jwt.decode(
-            credentials.credentials,
+            token,
             SECRET_KEY,
             algorithms=[ALGORITHM],
         )
+
         subject = payload.get("sub")
 
         if not subject:
-            raise unauthorized
+            raise credentials_exception
 
         user_id = int(subject)
 
-    except (JWTError, ValueError):
-        raise unauthorized
+    except (JWTError, ValueError) as error:
+        logger.warning(
+            "JWT validation failed: %s",
+            str(error),
+        )
+        raise credentials_exception from error
 
     user = db.get(User, user_id)
 
     if user is None:
-        raise unauthorized
+        logger.warning(
+            "JWT references missing user_id=%s",
+            user_id,
+        )
+        raise credentials_exception
+
+    logger.info(
+        "Authenticated request for user_id=%s",
+        user.UserID,
+    )
 
     return user
+
+def require_roles(*allowed_roles: str):
+    normalized_roles = {
+        role.strip().lower()
+        for role in allowed_roles
+    }
+
+    def role_dependency(
+        current_user: User = Depends(get_current_user),
+    ) -> User:
+        current_role = (current_user.Role or "").strip().lower()
+
+        if current_role not in normalized_roles:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="Insufficient role permissions",
+            )
+
+        return current_user
+
+    return role_dependency

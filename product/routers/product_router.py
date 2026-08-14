@@ -4,7 +4,9 @@ from sqlalchemy.orm import Session
 from product.db.session import get_db
 from product.schemas.product_schema import ProductCreate, ProductResponse
 from product.services import product_service
-
+from product.models.user import User
+from product.utils.security import get_current_user
+from product.utils.authorization import UserRole, require_roles
 
 router = APIRouter(
     prefix="/products",
@@ -20,6 +22,9 @@ router = APIRouter(
 def create_product(
     product_data: ProductCreate,
     db: Session = Depends(get_db),
+    current_user: User = Depends(
+        require_roles(UserRole.ADMIN.value),
+    ),
 ):
     try:
         return product_service.create_product(
@@ -53,6 +58,7 @@ def get_products(
     return product_service.get_all_products(db)
 
 
+
 @router.get(
     "/search",
     response_model=list[ProductResponse],
@@ -70,12 +76,17 @@ def search_products(
     ),
     db: Session = Depends(get_db),
 ):
-    return product_service.search_products(
-        db=db,
-        name=name,
-        category_id=category_id,
-    )
-
+    try:
+        return product_service.search_products(
+            db=db,
+            name=name,
+            category_id=category_id,
+        )
+    except ValueError as error:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=str(error),
+        ) from error
 
 @router.get(
     "/{product_id}",

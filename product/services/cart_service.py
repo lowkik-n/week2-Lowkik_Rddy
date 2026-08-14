@@ -19,13 +19,14 @@ from product.schemas.cart_schema import (
 def add_to_cart(
     db: Session,
     item_data: CartItemCreate,
+    user_id: int,
 ) -> CartItem:
     if item_data.quantity <= 0:
         raise ValueError("Quantity must be greater than 0")
 
     user = user_repository.get_user_by_id(
         db,
-        item_data.user_id,
+        user_id,
     )
 
     if user is None:
@@ -42,7 +43,7 @@ def add_to_cart(
     existing_item = (
         cart_repository.get_cart_item_by_user_and_product(
             db,
-            item_data.user_id,
+            user_id,
             item_data.product_id,
         )
     )
@@ -59,18 +60,19 @@ def add_to_cart(
 
     if requested_quantity > product.AvailableQuantity:
         raise ValueError(
-            "Quantity exceeds available stock"
+            "Quantity exceeds available stock",
         )
 
     if existing_item is not None:
         existing_item.Quantity = requested_quantity
+
         return cart_repository.update_cart_item(
             db,
             existing_item,
         )
 
     cart_item = CartItem(
-        UserID=item_data.user_id,
+        UserID=user_id,
         ProductID=item_data.product_id,
         Quantity=item_data.quantity,
     )
@@ -103,6 +105,7 @@ def update_cart_item(
     db: Session,
     cart_item_id: int,
     item_data: CartItemUpdate,
+    user_id: int,
 ) -> CartItem:
     if item_data.quantity <= 0:
         raise ValueError("Quantity must be greater than 0")
@@ -115,6 +118,11 @@ def update_cart_item(
     if cart_item is None:
         raise ValueError("Cart item not found")
 
+    if cart_item.UserID != user_id:
+        raise ValueError(
+            "Cart item does not belong to this user",
+        )
+
     product = product_repository.get_product_by_id(
         db,
         cart_item.ProductID,
@@ -125,7 +133,7 @@ def update_cart_item(
 
     if item_data.quantity > product.AvailableQuantity:
         raise ValueError(
-            "Quantity exceeds available stock"
+            "Quantity exceeds available stock",
         )
 
     cart_item.Quantity = item_data.quantity
@@ -139,6 +147,7 @@ def update_cart_item(
 def remove_cart_item(
     db: Session,
     cart_item_id: int,
+    user_id: int,
 ) -> None:
     cart_item = cart_repository.get_cart_item_by_id(
         db,
@@ -147,6 +156,11 @@ def remove_cart_item(
 
     if cart_item is None:
         raise ValueError("Cart item not found")
+
+    if cart_item.UserID != user_id:
+        raise ValueError(
+            "Cart item does not belong to this user",
+        )
 
     cart_repository.remove_cart_item(
         db,
@@ -182,10 +196,13 @@ def get_cart_summary(
 
         if product is None:
             raise ValueError(
-                "Product in cart no longer exists"
+                "Product in cart no longer exists",
             )
 
-        unit_price = Decimal(str(product.Price))
+        unit_price = Decimal(
+            str(product.Price),
+        )
+
         line_total = unit_price * cart_item.Quantity
         total_amount += line_total
 
@@ -196,7 +213,7 @@ def get_cart_summary(
                 quantity=cart_item.Quantity,
                 unit_price=unit_price,
                 line_total=line_total,
-            )
+            ),
         )
 
     return CartSummary(
